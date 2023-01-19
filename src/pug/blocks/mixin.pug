@@ -1,0 +1,327 @@
+mixin logo(name='healthy ration') 
+    .logo(class!=attributes.class) 
+        a(href="")
+            span= name
+            img(src="assets/img/icons/Main-logo.svg", alt="")
+
+mixin splider(beforeGreen,green,afterGreen,subtext,greenSubtext,afterSub,button,useful,href) 
+            li.splide__slide
+                .slide
+                    .main 
+                        .main__text= beforeGreen
+                            span= green 
+                            div= afterGreen
+                        .main__subtext= subtext
+                            span= greenSubtext 
+                            div= afterSub
+                        .main__order 
+                            a.main__button(href="")= button
+                            .main__price.ml-30= useful
+                                if block
+                                    block
+                    .img 
+                        img(src=href, alt="")
+
+mixin blocks 
+    .info
+        .row
+            .col-2.col-sm-6 
+                .info__body
+                    .info__img 
+                        img(src="assets/img/icons/icon1.svg", alt="")
+                    .info__text
+                        |Бережём природу. Эко-тара и проборы.
+            .col-2.col-sm-6 
+                .info__body
+                    .info__img 
+                        img(src="assets/img/icons/icon2.svg", alt="")
+                    .info__text
+                        |28 дней без повторения, более 300 блюд!
+            .col-2.col-sm-6 
+                .info__body
+                    .info__img 
+                        img(src="assets/img/icons/icon3.svg", alt="")
+                    .info__text
+                        |Бесплатно заменяемблюда и ингредиенты.
+            .col-2.col-sm-6 
+                .info__body
+                    .info__img 
+                        img(src="assets/img/icons/icon4.svg", alt="")
+                    .info__text
+                        |Готовим ночью, упаковываем и отправляем Вам!
+            .col-2.col-sm-6 
+                .info__body
+                    .info__img 
+                        img(src="assets/img/icons/icon5.svg", alt="")
+                    .info__text
+                        |Ежедневная удобная и бесплатная доставка с 6:00 до 10:00
+            .col-2.col-sm-6 
+                .info__body
+                    .info__img 
+                        img(src="assets/img/icons/icon6.svg", alt="")
+                    .info__text
+                        |Сохраняем Вашу энергию и до 14 часов в неделю освобождая от готовки!
+mixin programMood
+    .program
+        .bg-light 
+        .bg-circle 
+        .row 
+            .col-6.col-sm-12
+                .program__btn 
+                    button.active Программы питания
+            .col-6.col-sm-12
+                .program__btn 
+                    button Специальные программы
+        .program__list.name-mood
+            button.name-mood__block
+                .name-mood__name
+                    |Express Fit
+                .name-mood__kall 
+                    |800 ккал
+            button.name-mood__block
+                .name-mood__name
+                    |slim
+                .name-mood__kall 
+                    |1000 ккал
+            button.name-mood__block.active
+                .name-mood__name
+                    |fitness
+                .name-mood__kall 
+                    |1300 ккал
+            button.name-mood__block
+                .name-mood__name
+                    |balance
+                .name-mood__kall 
+                    |1600 ккал
+            button.name-mood__block
+                .name-mood__name
+                    |balance +
+                .name-mood__kall 
+                    |1800 ккал
+            button.name-mood__block
+                .name-mood__name
+                    |strong
+                .name-mood__kall 
+                    |2000 ккал
+            button.name-mood__block
+                .name-mood__name
+                    |maxi fit
+                .name-mood__kall 
+                    |2400 ккал
+        .row 
+            .col-4.col-sm-12
+                .program__info 
+                    .program__title fitness
+                        .program__kall 1300 ккал
+                    .program__desc Программа здорового питания Express Fit. Идеально для: похудения в кратчайшие сроки, повышения энергии и сил, снижения веса при сидячем образе жизни.
+                .program__deadline 
+                    table.program__table  
+                        tr
+                            td Тестовый день
+                            td 510 грн
+                            td 357 грн
+                        tr
+                            td 1 день
+                            td 
+                            td 510 грн
+                        tr
+                            td от 7 дней
+                            td 510 грн
+                            td 490 грн
+                        tr
+                            td от 14 дней
+                            td 510 грн
+                            td 470 грн
+                        tr
+                            td от 30 дней
+                            td 510 грн
+                            td 445 грн
+                        tr
+                            td Завтрак и ужин
+                            td.no-line -15%
+                            td 433 грн
+                .program__order 
+                    button Заказать
+            .col-8.col-sm-12
+                .program__weekdays.weekdays
+                    .weekdays__day.active ПН
+                    .weekdays__day вт
+                    .weekdays__day ср
+                    .weekdays__day чт
+                    .weekdays__day пт
+                    .weekdays__day сб
+                    .weekdays__day вс
+                .program__mode.mode
+                    table 
+                        tr 
+                            td.mode__moment
+                                .mode__type Завтрак
+                                .mode__time 7:00 - 9:00
+                            td 
+                                .mode__food - Фриттата с сыром и кабачками
+                            td 
+                                .mode__price 170гр
+                        tr 
+                            td.mode__moment
+                                .mode__type 2-й завтрак
+                                .mode__time 10:00 - 12:00
+                            td 
+                                .mode__food - Фермерский йогурт
+                                .mode__food - Полезное печенье из сухофруктов и орехов
+                            td 
+                                .mode__price 200гр 
+                                .mode__price 2 шт
+                        tr 
+                            td.mode__moment
+                                .mode__type Обед
+                                .mode__time 13:00 - 15:00
+                            td 
+                                .mode__food - Люля-кебаб из индейки
+                                .mode__food - Летний салат с маслинами и сыром
+                            td 
+                                .mode__price 100гр
+                                .mode__price 100гр
+                        tr 
+                            td.mode__moment
+                                .mode__type Полдник
+                                .mode__time 16:00 - 17:30
+                            td 
+                                .mode__food - Творожное суфле с какао и вишей
+                            td 
+                                .mode__price 100гр
+                        tr 
+                            td.mode__moment
+                                .mode__type Ужин
+                                .mode__time 19:00 - 20:00
+                            td 
+                                .mode__food - Рыбный терен
+                                .mode__food - Овощи гриль
+                            td 
+                                .mode__price 100гр
+                                .mode__price 150гр
+
+mixin photoSlide
+    .photoSlide
+        .photoSlide__title Фото блюд
+        section.splide.photoSlide__splide 
+            .splide__track.photoSlide__track 
+                ul.splide__list.photoSlide__list
+                    li.splide__slide.photoSlide__slide
+                        img(src="assets/img/foods/food1.png", alt="")
+                    li.splide__slide.photoSlide__slide
+                        img(src="assets/img/foods/food2.png", alt="")
+                    li.splide__slide.photoSlide__slide
+                        img(src="assets/img/foods/food3.png", alt="")
+                    li.splide__slide.photoSlide__slide
+                        img(src="assets/img/foods/food4.png", alt="")
+                    li.splide__slide.photoSlide__slide
+                        img(src="assets/img/foods/food5.png", alt="")
+                    li.splide__slide.photoSlide__slide
+                        img(src="assets/img/foods/food6.png", alt="")
+
+mixin formBlock 
+    .row
+        .col-5.col-lg-5
+            form.form#form(action="#") 
+                h3.form__title Оформить заказ
+                .form__subtitle Обсудите все детали заказа по телефону или сами укажите все подробности онлайн
+                .form__item 
+                    label.form__label(for="formName") Имя
+                    input.form__input._req(id="formName" type="text" name="name")
+                .form__item 
+                    label.form__label(for="formNumber") Номер телефона
+                    input.form__input._req(id="formNumber" type="number" name="phone")
+                .form__item 
+                    .checkbox
+                        .checkbox__item
+                            input(id="testagree" type="checkbox" name="agreement" class="checkbox__input _req")
+                            label.checkbox__label(for="testagree") 
+                                span Тест-день! Получить скидку -30%?
+                        .checkbox__item
+                            input(id="Agreement" type="checkbox" name="agreement" class="checkbox__input _req")
+                            label.checkbox__label(for="Agreement") 
+                                span Согласен с 
+                                    a(href="#")  условиями сотрудничества
+                .form__item 
+                    .form__buttons
+                        a.form__button(href="tel:+38 (068) 949 - 49 -19") Заказ по телефону
+                        span ИЛИ
+                        button.form__button.big-button.active(type="submit") Онлайн заказ
+
+        .col-7.col-lg-12
+          .faq__body 
+            .faq__title Часто задаваемые вопросы
+            .faq__content
+              .faq__block
+                button.faq__question
+                  h3.faq__sentence Как осуществляется доставка правильного питания?
+                  .faq__plus 
+                    svg(width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg")
+                      path(d="M8.70711 8.70711C9.09763 8.31658 9.09763 7.68342 8.70711 7.29289L2.34315 0.928932C1.95262 0.538408 1.31946 0.538408 0.928932 0.928932C0.538408 1.31946 0.538408 1.95262 0.928932 2.34315L6.58579 8L0.928932 13.6569C0.538408 14.0474 0.538408 14.6805 0.928932 15.0711C1.31946 15.4616 1.95262 15.4616 2.34315 15.0711L8.70711 8.70711ZM7 9H8V7H7V9Z" fill="black")
+
+                .faq__answer 
+                  p Доставка рационов здорового питания осуществляется ежедневно с 6.00 до 10.00 в выбранный Вами часовой диапазон . Время ожидания курьера по адресу составляет 10 мин. Далее курьер едет на следующий адрес. Если Вас не было по адресу или Вы не вышли на связь, пакет повторно может быть доставлен к Вам на такси за Ваш счет или будет списан.
+              .faq__block
+                button.faq__question
+                  h3.faq__sentence Можно ли менять время доставки\место?
+                  .faq__plus 
+                    svg(width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg")
+                      path(d="M8.70711 8.70711C9.09763 8.31658 9.09763 7.68342 8.70711 7.29289L2.34315 0.928932C1.95262 0.538408 1.31946 0.538408 0.928932 0.928932C0.538408 1.31946 0.538408 1.95262 0.928932 2.34315L6.58579 8L0.928932 13.6569C0.538408 14.0474 0.538408 14.6805 0.928932 15.0711C1.31946 15.4616 1.95262 15.4616 2.34315 15.0711L8.70711 8.70711ZM7 9H8V7H7V9Z" fill="black")
+                .faq__answer 
+                  p Доставка рационов здорового питания осуществляется ежедневно с 6.00 до 10.00 в выбранный Вами часовой диапазон . Время ожидания курьера по адресу составляет 10 мин. Далее курьер едет на следующий адрес. Если Вас не было по адресу или Вы не вышли на связь, пакет повторно может быть доставлен к Вам на такси за Ваш счет или будет списан.
+              .faq__block
+                button.faq__question
+                  h3.faq__sentence Как и в чем приезжает еда?
+                  .faq__plus 
+                    svg(width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg")
+                      path(d="M8.70711 8.70711C9.09763 8.31658 9.09763 7.68342 8.70711 7.29289L2.34315 0.928932C1.95262 0.538408 1.31946 0.538408 0.928932 0.928932C0.538408 1.31946 0.538408 1.95262 0.928932 2.34315L6.58579 8L0.928932 13.6569C0.538408 14.0474 0.538408 14.6805 0.928932 15.0711C1.31946 15.4616 1.95262 15.4616 2.34315 15.0711L8.70711 8.70711ZM7 9H8V7H7V9Z" fill="black")
+                .faq__answer 
+                  p Доставка рационов здорового питания осуществляется ежедневно с 6.00 до 10.00 в выбранный Вами часовой диапазон . Время ожидания курьера по адресу составляет 10 мин. Далее курьер едет на следующий адрес. Если Вас не было по адресу или Вы не вышли на связь, пакет повторно может быть доставлен к Вам на такси за Ваш счет или будет списан.
+              .faq__block
+                button.faq__question
+                  h3.faq__sentence Когда Вы готовите? 
+                  .faq__plus 
+                    svg(width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg")
+                      path(d="M8.70711 8.70711C9.09763 8.31658 9.09763 7.68342 8.70711 7.29289L2.34315 0.928932C1.95262 0.538408 1.31946 0.538408 0.928932 0.928932C0.538408 1.31946 0.538408 1.95262 0.928932 2.34315L6.58579 8L0.928932 13.6569C0.538408 14.0474 0.538408 14.6805 0.928932 15.0711C1.31946 15.4616 1.95262 15.4616 2.34315 15.0711L8.70711 8.70711ZM7 9H8V7H7V9Z" fill="black")
+                .faq__answer 
+                  p Доставка рационов здорового питания осуществляется ежедневно с 6.00 до 10.00 в выбранный Вами часовой диапазон . Время ожидания курьера по адресу составляет 10 мин. Далее курьер едет на следующий адрес. Если Вас не было по адресу или Вы не вышли на связь, пакет повторно может быть доставлен к Вам на такси за Ваш счет или будет списан.
+              .faq__block
+                button.faq__question
+                  h3.faq__sentence Какие продукты Вы используете?
+                  .faq__plus 
+                    svg(width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg")
+                      path(d="M8.70711 8.70711C9.09763 8.31658 9.09763 7.68342 8.70711 7.29289L2.34315 0.928932C1.95262 0.538408 1.31946 0.538408 0.928932 0.928932C0.538408 1.31946 0.538408 1.95262 0.928932 2.34315L6.58579 8L0.928932 13.6569C0.538408 14.0474 0.538408 14.6805 0.928932 15.0711C1.31946 15.4616 1.95262 15.4616 2.34315 15.0711L8.70711 8.70711ZM7 9H8V7H7V9Z" fill="black")
+                .faq__answer 
+                  p Доставка рационов здорового питания осуществляется ежедневно с 6.00 до 10.00 в выбранный Вами часовой диапазон . Время ожидания курьера по адресу составляет 10 мин. Далее курьер едет на следующий адрес. Если Вас не было по адресу или Вы не вышли на связь, пакет повторно может быть доставлен к Вам на такси за Ваш счет или будет списан.
+              .faq__block
+                button.faq__question
+                  h3.faq__sentence Я буду есть одно и то же?
+                  .faq__plus 
+                    svg(width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg")
+                      path(d="M8.70711 8.70711C9.09763 8.31658 9.09763 7.68342 8.70711 7.29289L2.34315 0.928932C1.95262 0.538408 1.31946 0.538408 0.928932 0.928932C0.538408 1.31946 0.538408 1.95262 0.928932 2.34315L6.58579 8L0.928932 13.6569C0.538408 14.0474 0.538408 14.6805 0.928932 15.0711C1.31946 15.4616 1.95262 15.4616 2.34315 15.0711L8.70711 8.70711ZM7 9H8V7H7V9Z" fill="black")
+                .faq__answer 
+                  p Доставка рационов здорового питания осуществляется ежедневно с 6.00 до 10.00 в выбранный Вами часовой диапазон . Время ожидания курьера по адресу составляет 10 мин. Далее курьер едет на следующий адрес. Если Вас не было по адресу или Вы не вышли на связь, пакет повторно может быть доставлен к Вам на такси за Ваш счет или будет списан.
+              .faq__block
+                button.faq__question
+                  h3.faq__sentence У меня аллергия и непереносимость определенных продуктов
+                  .faq__plus 
+                    svg(width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg")
+                      path(d="M8.70711 8.70711C9.09763 8.31658 9.09763 7.68342 8.70711 7.29289L2.34315 0.928932C1.95262 0.538408 1.31946 0.538408 0.928932 0.928932C0.538408 1.31946 0.538408 1.95262 0.928932 2.34315L6.58579 8L0.928932 13.6569C0.538408 14.0474 0.538408 14.6805 0.928932 15.0711C1.31946 15.4616 1.95262 15.4616 2.34315 15.0711L8.70711 8.70711ZM7 9H8V7H7V9Z" fill="black")
+                .faq__answer 
+                  p Доставка рационов здорового питания осуществляется ежедневно с 6.00 до 10.00 в выбранный Вами часовой диапазон . Время ожидания курьера по адресу составляет 10 мин. Далее курьер едет на следующий адрес. Если Вас не было по адресу или Вы не вышли на связь, пакет повторно может быть доставлен к Вам на такси за Ваш счет или будет списан.
+              .faq__block
+                button.faq__question
+                  h3.faq__sentence В какой очередности все есть?
+                  .faq__plus 
+                    svg(width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg")
+                      path(d="M8.70711 8.70711C9.09763 8.31658 9.09763 7.68342 8.70711 7.29289L2.34315 0.928932C1.95262 0.538408 1.31946 0.538408 0.928932 0.928932C0.538408 1.31946 0.538408 1.95262 0.928932 2.34315L6.58579 8L0.928932 13.6569C0.538408 14.0474 0.538408 14.6805 0.928932 15.0711C1.31946 15.4616 1.95262 15.4616 2.34315 15.0711L8.70711 8.70711ZM7 9H8V7H7V9Z" fill="black")
+                .faq__answer 
+                  p Доставка рационов здорового питания осуществляется ежедневно с 6.00 до 10.00 в выбранный Вами часовой диапазон . Время ожидания курьера по адресу составляет 10 мин. Далее курьер едет на следующий адрес. Если Вас не было по адресу или Вы не вышли на связь, пакет повторно может быть доставлен к Вам на такси за Ваш счет или будет списан.
+              .faq__block
+                button.faq__question
+                  h3.faq__sentence Можно ли замораживать программу?
+                  .faq__plus 
+                    svg(width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg")
+                      path(d="M8.70711 8.70711C9.09763 8.31658 9.09763 7.68342 8.70711 7.29289L2.34315 0.928932C1.95262 0.538408 1.31946 0.538408 0.928932 0.928932C0.538408 1.31946 0.538408 1.95262 0.928932 2.34315L6.58579 8L0.928932 13.6569C0.538408 14.0474 0.538408 14.6805 0.928932 15.0711C1.31946 15.4616 1.95262 15.4616 2.34315 15.0711L8.70711 8.70711ZM7 9H8V7H7V9Z" fill="black")
+                .faq__answer 
+                  p Доставка рационов здорового питания осуществляется ежедневно с 6.00 до 10.00 в выбранный Вами часовой диапазон . Время ожидания курьера по адресу составляет 10 мин. Далее курьер едет на следующий адрес. Если Вас не было по адресу или Вы не вышли на связь, пакет повторно может быть доставлен к Вам на такси за Ваш счет или будет списан.

@@ -1,0 +1,14 @@
+a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+select, textarea, input, button{
+    border: 0;
+    background: unset;
+    cursor: pointer;
+    &:focus{
+        outline: 0;
+    }
+}

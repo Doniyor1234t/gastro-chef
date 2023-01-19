@@ -1,0 +1,30 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Montserrat:wght@400;500;700&display=swap');
+@import 'lip/var';
+body{
+    font-family: 'Montserrat';
+    font-weight: 400;
+    color: $black;
+    background: $white;
+    overflow-x: hidden;
+}
+
+@import 'lip/splide';
+@import 'lip/grid';
+@import 'lip/main';
+@import 'lip/function';
+
+@import 'blocks/header';
+@import 'blocks/types';
+@import 'blocks/slide';
+@import 'blocks/info';
+@import 'blocks/program';
+@import 'blocks/photoSlide';
+@import 'blocks/form';
+@import 'blocks/faq';
+

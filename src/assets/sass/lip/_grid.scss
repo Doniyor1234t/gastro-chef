@@ -1,0 +1,98 @@
+.container{
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 10px;
+    box-sizing: content-box;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    @media (max-width:1024px){
+        margin: 0 -7.5px;
+    }
+    margin: 0 -10px;
+}
+
+@for $i from 1 through 12 {
+    .col-#{$i}{
+        @include fb(percentage($i/12))
+    }
+}
+@media (max-width:1024px) {
+    @for $i from 1 through 12 {
+        .col-lg-#{$i}{
+            @include fb(percentage($i/12))
+        }
+    }
+}
+@media (max-width:768px) {
+    @for $i from 1 through 12 {
+        .col-md-#{$i}{
+            @include fb(percentage($i/12))
+        }
+    }
+}
+@media (max-width:600px) {
+    @for $i from 1 through 12 {
+        .col-sm-#{$i}{
+            @include fb(percentage($i/12))
+        }
+    }
+}
+@media (max-width:375px) {
+    @for $i from 1 through 12 {
+        .col-xs-#{$i}{
+            @include fb(percentage($i/12))
+        }
+    }
+}
+
+.m{
+    &l{
+        &-a{margin-left: auto;}
+        @for $i from 1 through 10 {
+            &-#{$i*10}{
+                margin-left: #{$i*10}px;
+            }
+        }
+    }
+    &r{
+        &-a{margin-right: auto;}
+        @for $i from 1 through 10 {
+            &-#{$i*10}{
+                margin-right: #{$i*10}px;
+            }
+        }
+    }
+    &b{
+        &-a{margin-bottom: auto;}
+        @for $i from 1 through 10 {
+            &-#{$i*10}{
+                margin-bottom: #{$i*10}px;
+            }
+        }
+    }
+    &t{
+        &-a{margin-top: auto;}
+        @for $i from 1 through 10 {
+            &-#{$i*10}{
+                margin-top: #{$i*10}px;
+            }
+        }
+    }
+    &x{
+        @for $i from 1 through 10 {
+            &-#{$i*10}{
+                margin-top:0px #{$i*10}px;
+            }
+        }
+    }
+    &y{
+        @for $i from 1 through 10 {
+            &-#{$i*10}{
+                margin-top: #{$i*10}px 0px;
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+$green: #64D370;
+$black: #020202;
+$pink: #FE3666;
+$lightpink:#F87676;
+$white: #F5FAFF;
+$gray: #DEE6EE;
+
+
+@mixin fb($w,$px:10px,$py:10px){
+    flex-basis: $w;
+    max-width: $w;
+    width: $w;
+    padding: $py $px;
+    @media (max-width:1024px){
+        padding: 7.5px 7.5px;
+    }
+}
+
+@mixin bg(){
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+@mixin dcenter(){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin dflex($a:center,$j:center){
+    display: flex;
+    align-items: $a;
+    justify-content: $j;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.justify-content-between{
+    justify-content: space-between;
+}
+
+.justify-content-end {
+    justify-content: flex-end;
+}
+.text-center{
+    text-align: center;
+}

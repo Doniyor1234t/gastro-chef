@@ -1,0 +1,102 @@
+.faq{
+  &__body{
+  }
+  &__title{
+    font-family: 'Comfortaa';
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 28px;
+    text-align: center;
+    color: $black;
+    margin-bottom: 35px;
+  }
+  &__content{
+    width: 100%;
+  }
+  &__block{
+    box-shadow: 0px 0px 20px rgba(86, 86, 86, 0.2);
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    background: #F5FAFF;
+    transition: all .5s ease 0s;
+    &:hover{
+      background: $green;
+      color: $white;
+      .faq__plus{
+        svg{
+          height: 100%;
+          width: 100%;
+          path{
+            fill: $white;
+          }
+        }
+      }
+      .faq__sentence{
+        color: $white;
+      }
+    }
+    &.active{
+      background: $green;
+      .faq__answer{
+        padding: 15px 0 24px 0;
+        opacity: 1;
+        max-height: 9em;
+        transition: all 200ms ease;
+        will-change: opacity, max-height, padding;
+      }
+      .faq__sentence{
+        color: $white;
+      }
+      .faq__plus{
+        svg{
+          height: 100%;
+          width: 100%;
+          transform: rotate(90deg);
+          path{
+            fill: $white;
+          }
+        }
+      }
+    }
+  }
+  &__question{
+    padding: 10px 0px 9px 0px;
+    border-radius: 190px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__sentence{
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 133.8%;
+    letter-spacing: 0.025em;
+    color: $black;
+  }
+  &__plus{
+    svg{
+      height: 100%;
+      transition: all 0.8s ease 0s;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__answer{
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 200ms ease, max-height 200ms ease;
+    will-change: opacity, max-height;
+    p{
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 133.8%;
+      letter-spacing: 0.025em;
+      color: #F5FAFF;
+      }
+  }
+}

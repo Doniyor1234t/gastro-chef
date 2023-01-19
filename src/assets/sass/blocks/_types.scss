@@ -1,0 +1,173 @@
+.types{
+    position: absolute;
+    top: 168px;
+    z-index: 50;
+    @media (max-width:1024px){
+        top: 111px;
+    }
+    @media (max-width:428px){
+        position: fixed;
+        width: 280px;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin: 0;
+    }
+    &__icon{
+        @media (max-width: 428px) {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &__link{
+        margin-bottom: 50px;
+        @media (max-width:1024px){
+            margin-bottom: 10.48px;
+            font-size: 10px; 
+        }
+        @media (max-width: 428px) {
+            margin: 0;
+        }
+        a{
+            display: inline-block;
+            overflow: hidden;
+            position: relative;
+            font-family: 'Comfortaa';
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 138.5%;
+            text-align: center;
+            color: $black;
+            background: $white;
+            box-shadow: 0px 0px 30px rgba(86, 86, 86, 0.25);
+            height: 70px;
+            width: 70px;
+            border-radius: 190px;
+            transition: all 0.5s ease;
+            svg{
+                @media (max-width:1024px){
+                    width: 23px;
+                    height: 23px;
+                }
+                display: block;
+            }
+            padding-left: 10px;
+            @include dflex(center, space-between);
+            &:hover{
+                color: $green;
+                display: flex;
+                align-items: center;
+                width: 188px;
+                svg{
+                    path{
+                        fill:$green;
+                    }
+                }
+                .types_text{
+                    display: block;
+                }
+                @media (max-width:1024px){
+                    width: 41.27px;
+                    svg{
+                        path{
+                            fill:$green;
+                        }
+                    }
+                }
+            }
+            @media (max-width:1024px){
+                width: 41.27px;
+                height: 41.27px;
+                font-size: 10px;
+            }
+        }
+    }
+    &_text{
+        position: absolute;
+        left: 94px;
+        display: none;
+        font-family: 'Comfortaa';
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 100%;
+        letter-spacing: 0.025em;
+        color: $green;
+    }
+}
+
+.social {
+    position: fixed;
+    bottom: 100px;
+    @media (max-width:1024px){
+        position: fixed;
+        right: 0;
+    }
+    right: 50px;
+    z-index: 5;
+    &__circle-main{
+        position: relative;
+        width: 80px;
+        height: 80px;
+        @media (max-width:1024px){
+            transform: scale(0.6);
+            bottom: 10px;
+        }
+        background: $white;
+        border-radius: 50%;
+        box-shadow: 0px 0px 30px rgba(86, 86, 86, 0.25);
+        @include dflex();
+        cursor: pointer;
+        & img{
+            width: 36px;
+            height: 36px;
+            display: block;
+        }
+    }
+    &__telegram{
+        position: absolute;
+        left: -15px;
+        bottom: -30px;
+        @media (max-width:1024px){
+            transform: scale(0.6);
+            left: 0px;
+            bottom: 0px;
+        }
+        width: 33px;
+        height: 33px;
+        background: #000;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        & img{
+            width: 17px;
+            height: 17px;
+        }
+    }
+    &__whatsapp{
+        position: absolute;
+        left: 25px;
+        bottom: -42px;
+        @media (max-width:1024px){
+            transform: scale(0.6);
+            bottom: -10px;
+        }
+        width: 33px;
+        height: 33px;
+        background: #000;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        & img{
+            width: 18px;
+            height: 18px;
+        }
+    }
+    &__hidden {
+        display: none;
+    }
+}
