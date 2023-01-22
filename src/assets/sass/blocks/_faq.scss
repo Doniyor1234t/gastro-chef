@@ -1,10 +1,20 @@
 .faq{
   &__body{
+    @media (max-width:1024px){
+      margin-top: 100px;
+    }
+    @media (max-width:768px){
+      margin-top: calc(((100 - 60)*(100vw - 320px))/(768 - 320) + 60px);
+    }
   }
   &__title{
     font-family: 'Comfortaa';
     font-weight: 700;
     font-size: 25px;
+    @media (max-width:768px){
+        font-size: calc(((25 - 20)*(100vw - 320px))/(768 - 320) + 20px);
+        line-height: calc(((28 - 22)*(100vw - 320px))/(768 - 320) + 22px);
+    }
     line-height: 28px;
     text-align: center;
     color: $black;
@@ -62,19 +72,30 @@
   }
   &__question{
     padding: 10px 0px 9px 0px;
+    @media (max-width:768px){
+      padding: calc(((10- 7)*(100vw - 320px))/(768 - 320) + 7px) 0px calc(((9- 7)*(100vw - 320px))/(768 - 320) + 7px) 0px;
+    }
     border-radius: 190px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media (max-width:428px){
+      display: flex;
+      
+    }
   }
   &__sentence{
     font-family: 'Montserrat';
     font-weight: 400;
     font-size: 16px;
+    @media (max-width:768px){
+      font-size: calc(((16- 10)*(100vw - 320px))/(768 - 320) + 10px);
+    }
     line-height: 133.8%;
     letter-spacing: 0.025em;
     color: $black;
+    align-items: start;
   }
   &__plus{
     svg{

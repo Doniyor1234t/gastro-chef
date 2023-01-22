@@ -59,8 +59,12 @@ body.dark{
     z-index: 100;
     background: rgba(2, 2, 2, 0.85);
     overflow: hidden;
+    
 }
 .header{
+    @media (max-width:428px) {
+        background: rgba(2, 2, 2, 0.85);
+    }
     &__menu{
         display: flex;
         align-items: center;

@@ -10,12 +10,16 @@ if(menuIcon){
 var splidePhoto = new Splide( '.photoSlide__splide', {
     type     : 'loop',
     drag   : 'free',  
-    padding: { left: '39%', right: '39%' },
+    padding: '39%',
     autoScroll: {
         speed: 1,
     },  
     arrows   : false,
     pagination: false,
+    breakpoints: {
+      1024: {padding: '31%'},
+      428: {padding: '10%'}
+    },
 } );
 
 splidePhoto.mount( window.splide.Extensions );
