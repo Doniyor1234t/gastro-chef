@@ -1,6 +1,7 @@
 
 .container{
     position: relative;
+    background: $white;
     .logo{
         a{
             @include dflex();
@@ -59,7 +60,12 @@ body.dark{
     z-index: 100;
     background: rgba(2, 2, 2, 0.85);
     overflow: hidden;
-    
+    .container{
+        background: rgba(2, 2, 2, 0.85);
+    }
+    .menu{
+        overflow: hidden;
+    }
 }
 .header{
     @media (max-width:428px) {
@@ -125,7 +131,7 @@ body.dark{
             
             &._active{
                 span{
-                    transform: scale(0) translate(0,-50%);
+                    transform: translate(270%,-50%);
                 }
                 .header__menu-svg{
                     width: 20.47px;

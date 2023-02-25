@@ -14,7 +14,8 @@ body{
     overflow-x: hidden;
 }
 .wrapper{
-    overflow: hidden
+    overflow: hidden;
+    background: $white;
 }
 @import 'lip/splide';
 @import 'lip/grid';
@@ -30,4 +31,6 @@ body{
 @import 'blocks/form';
 @import 'blocks/faq';
 @import 'blocks/footer';
+@import 'blocks/history';
+@import 'blocks/products';
 

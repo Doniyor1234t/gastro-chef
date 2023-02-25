@@ -99,11 +99,17 @@
             }
         }
     }
+    b{
+        font-family: 'Comfortaa';
+        font-size: 20px;
+        line-height: 22px;
+    }
 }
 .slide{
-    margin-top: 38px;
+    padding-top: calc(((94 - 67)*(100vw - 768px))/(1920 - 768) + 67px);
     @include dflex(center, space-between );
     @media (max-width: 428px) {
+        padding-top: 26px;
         display: flex;
         align-items: flex-start;
         flex-direction: column-reverse;
@@ -153,6 +159,8 @@
         border: 10px solid $white;
         height: 127px;
         margin: 26px 0px 0 123px;
+        position: relative;
+        z-index: 0;
     }
     img{
         display: block;

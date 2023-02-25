@@ -1,0 +1,153 @@
+.infoproduct{
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        top: -701.9px;
+        right: -541px;
+        width: 639.9px;
+        height: 639.9px;
+        background: $green;
+        border-radius: 50%;
+        @media (max-width:1024px){
+            display: none;
+        }
+    }
+    margin-top: calc(((266 - 145)*(100vw - 768px))/(1920 - 768) + 145px);
+    .row{
+        justify-content: center;
+    }
+    &__card{
+        margin-bottom: 40px;
+        &:hover>.infoproduct__img img{
+            transform: translateY(-5px);
+            filter: drop-shadow(0px 5px 20px rgba(86, 86, 86, 0.5));
+        }
+    }
+    &__img{
+        cursor: pointer;
+        img{
+            width: 100%;
+            height: 100%;
+            display: block;
+            transition: all .6s cubic-bezier(0, 0, 0, 1) 0s;
+            filter: drop-shadow(0px 0px 10px rgba(86, 86, 86, 0.5));
+            border-radius: 30px;
+        }
+    }
+    &__body{
+        margin: 20px 10px 0 10px;
+    }
+    &__title{
+        font-family: 'Comfortaa';
+        font-weight: 700;
+        font-size: calc(((16 - 14)*(100vw - 768px))/(1920 - 768) + 14px);
+        line-height: calc(((18 - 16)*(100vw - 768px))/(1920 - 768) + 16px);
+        color: $black;
+        @media (max-width:428px){
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+    &__block{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 12px;
+    }
+    &__date{
+        @media (max-width:428px){
+            font-size: 10px;
+        }
+        font-weight: 500;
+        font-size: calc(((14 - 10)*(100vw - 768px))/(1920 - 768) + 10px);
+        line-height: 133.8%;
+        letter-spacing: 0.025em;
+        color: #B5C2CE;
+    }
+    &__button{
+        @media (max-width:428px){
+            height: 26px;
+            font-size: 10px;
+            padding: 0 17px;
+        }
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: calc(((14 - 10)*(100vw - 768px))/(1920 - 768) + 10px);
+        line-height: 133.8%;
+        letter-spacing: 0.025em;
+        color: $green;
+        height: calc(((35 - 26)*(100vw - 768px))/(1920 - 768) + 26px);
+        margin: auto 0px;
+        padding: 0 calc(((20 - 17)*(100vw - 768px))/(1920 - 768) + 17px);
+        border: 1.5px solid #64D370;
+        border-radius: 190px;
+        transition: all .6s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+        &:hover{
+            background: $green;
+            color: $white;
+            &, path{
+                fill:$white;
+            }
+        }
+        svg{
+            margin-left: calc(((10 - 3)*(100vw - 768px))/(1920 - 768) + 3px);
+            @media (max-width:428px){
+                margin-left: 8px;
+            }
+            @media (max-width:1024px){
+                transform: scale(.8);
+            }
+        }
+    }
+    &__pagination {
+        &.infoproduct__paginNumbers{
+            margin: 0;
+        }
+        &.top{
+            margin-bottom: calc(((30 - 20)*(100vw - 768px))/(1920 - 768) + 20px);
+            @media (min-width:1024px){
+                display: none;
+            }
+        }
+        display: flex;
+        align-items: center;
+        margin-left: calc(((30 - 90)*(100vw - 768px))/(1920 - 768) + 90px);
+        @media (max-width:428px){
+            margin-left: 20px;
+        }
+        button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: calc(((30 - 22)*(100vw - 768px))/(1920 - 768) + 22px);
+            height: calc(((30 - 22)*(100vw - 768px))/(1920 - 768) + 22px);
+            font-weight: 500;
+            font-size: calc(((14 - 12)*(100vw - 768px))/(1920 - 768) + 12px);
+            line-height: calc(((17 - 15)*(100vw - 768px))/(1920 - 768) + 15px);
+            text-align: center;
+            letter-spacing: 0.025em;
+            margin: auto 20px auto 0;
+            color: $black;
+            border-radius: 50%;
+            background: $gray;
+            @media (max-width:768px){
+                min-width: 22px;
+                min-height: 22px;
+                font-size: 14px;
+                line-height: 17px;
+
+            }
+            svg{
+                @media (max-width:1024px){
+                    transform: scale(.8);
+                }
+            }
+            &.active{
+                background: $green;
+                color: $white;
+            }
+        }
+    }
+}
